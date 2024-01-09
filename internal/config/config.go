@@ -36,7 +36,7 @@ func InitConfig() {
 		viper.SetConfigName(".qbt")
 		viper.AddConfigPath(".") // optionally look for config in the working directory
 		viper.AddConfigPath(home)
-		viper.AddConfigPath("$HOME/.config/qbt") // call multiple times to add many search paths
+		viper.AddConfigPath(home + "/.config/qbt") // call multiple times to add many search paths
 	}
 
 	if err := viper.ReadInConfig(); err != nil {
